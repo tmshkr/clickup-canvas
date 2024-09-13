@@ -18,7 +18,4 @@ model AssignmentTask {
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-
-  @@unique([assignmentId, name])
-  @@unique([courseId, name])
 }
