@@ -15430,7 +15430,7 @@ var require_client = __commonJS({
           "value": "prisma-client-js"
         },
         "output": {
-          "value": "/home/runner/work/clickup-canvas-v0/clickup-canvas-v0/node_modules/@prisma/client",
+          "value": "/home/runner/work/clickup-canvas/clickup-canvas/node_modules/@prisma/client",
           "fromEnvVar": null
         },
         "config": {
@@ -15444,7 +15444,7 @@ var require_client = __commonJS({
           }
         ],
         "previewFeatures": [],
-        "sourceFilePath": "/home/runner/work/clickup-canvas-v0/clickup-canvas-v0/prisma/schema.prisma"
+        "sourceFilePath": "/home/runner/work/clickup-canvas/clickup-canvas/prisma/schema.prisma"
       },
       "relativeEnvPaths": {
         "rootEnvPath": null
@@ -19003,7 +19003,7 @@ async function sync({ courseId, listId }) {
   const tasks = await getTasksForList({ listId });
   const tasksByName = tasks.reduce((map, task) => {
     if (map.has(task.name)) {
-      throw new Error(`Duplicate task: ${task.name}`);
+      console.warn(`Duplicate task name: ${task.name}`);
     }
     map.set(task.name, task);
     return map;
