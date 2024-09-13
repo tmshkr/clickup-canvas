@@ -1,0 +1,21 @@
+{
+  "name": "clickup-canvas",
+  "version": "1.0.0",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "esbuild main.ts --bundle --platform=node --outfile=dist/main.js",
+    "main": "tsx --env-file=.env main.ts"
+  },
+  "author": "Tim Shaker (tmshkr.dev)",
+  "license": "MIT",
+  "dependencies": {
+    "@prisma/client": "^5.19.1",
+    "axios": "^1.7.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.2",
+    "esbuild": "^0.23.1",
+    "prisma": "^5.19.1",
+    "tsx": "^4.19.1"
+  }
+}

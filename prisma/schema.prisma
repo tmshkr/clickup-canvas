@@ -1,0 +1,24 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model AssignmentTask {
+  taskId       String    @id
+  assignmentId BigInt
+  courseId     BigInt
+  dueAt        DateTime?
+  name         String
+  htmlUrl      String    @unique
+  listId       String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([assignmentId, name])
+  @@unique([courseId, name])
+}

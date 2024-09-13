@@ -1,0 +1,22 @@
+[
+  {
+    "courseId": "12340000000123456",
+    "courseName": "CS220 Software Engineering",
+    "listId": "123456789012"
+  },
+  {
+    "courseId": "12340000000123456",
+    "courseName": "CS250 C++ Programming 2",
+    "listId": "123456789013"
+  },
+  {
+    "courseId": "12340000000123456",
+    "courseName": "CS262 Discrete Structures",
+    "listId": "123456789014"
+  },
+  {
+    "courseId": "12340000000123456",
+    "courseName": "CYBR132 Intro to Ethical Hacking",
+    "listId": "123456789015"
+  }
+]

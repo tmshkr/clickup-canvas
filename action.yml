@@ -1,0 +1,29 @@
+name: clickup-canvas
+description: Canvas assignment -> ClickUp task one-way sync
+inputs:
+  canvas_api_token:
+    description: "Canvas API token."
+    required: true
+  courses_json:
+    description: "Path to a JSON array of Canvas course IDs, course names, and ClickUp lists to sync."
+    required: true
+    default: "courses.json"
+  clickup_api_key:
+    description: "ClickUp API key."
+    required: true
+  db_file:
+    description: "Name of a SQLite database file to use for storing sync state."
+    required: true
+    default: "data.db"
+  domain:
+    description: "Canvas domain used by your school, which will replace the default domain and added to ClickUp task descriptions."
+    required: true
+    default: "canvas.instructure.com"
+
+runs:
+  using: "node20"
+  main: "main.js"
+
+branding:
+  icon: "book-open"
+  color: "orange"
