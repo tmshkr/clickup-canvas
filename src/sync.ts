@@ -12,7 +12,7 @@ export async function sync({ courseId, listId }) {
   const tasks = await getTasksForList({ listId });
   const tasksByName = tasks.reduce((map, task) => {
     if (map.has(task.name)) {
-      throw new Error(`Duplicate task: ${task.name}`);
+      console.warn(`Duplicate task name: ${task.name}`);
     }
     map.set(task.name, task);
     return map;
