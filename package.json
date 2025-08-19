@@ -4,7 +4,8 @@
   "main": "dist/main.js",
   "scripts": {
     "build": "esbuild main.ts --bundle --platform=node --outfile=dist/main.js",
-    "main": "tsx --env-file=.env main.ts"
+    "sync:cccd": "tsx --env-file=cccd.env main.ts",
+    "sync:csumb": "tsx --env-file=csumb.env main.ts"
   },
   "author": "Tim Shaker (tmshkr.dev)",
   "license": "MIT",
